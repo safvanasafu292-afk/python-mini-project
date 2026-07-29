@@ -1,0 +1,46 @@
+def get_mark():
+    English=int(input("enter a mark in english:"))
+    maths=int(input("enter a mark in maths:"))
+    science=int(input("enter a marke in science:"))
+    social=int(input("enter a marke in social:"))
+    computer=int(input("enter a marke in computer:"))
+    return English,maths,science,social,computer
+English,maths,science,social,computer =get_mark()
+def calculate_total(English,maths,science,social,computer):
+    total=English+maths+science+social+computer
+    return total
+
+total = calculate_total(English,maths,science,social,computer)
+
+def calculate_average(total):
+    average = total / 5
+    return  average
+average = calculate_average(total)
+def find_grade(average):
+    if average >= 90:
+        return "A+"
+    elif average >= 80:
+        return "A"
+    elif average >= 70:
+        return "B"
+    elif average >= 60:
+        return "C"
+    elif average >= 50:
+        return "D" 
+    else:
+        return "Fail"
+
+def display_result(total, average, grade):
+    if grade=="Fail":
+        result ="fail"
+    else:
+        result="pass"
+        print("--- Student Result ---")
+        print("Total Marks:", total)
+        print("Average :", average)
+        print("Grade :", grade)
+        print("Result :", result)
+grade = find_grade(average)
+display_result(total, average, grade)
+
+    
