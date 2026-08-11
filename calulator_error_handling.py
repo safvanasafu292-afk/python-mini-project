@@ -28,5 +28,4 @@ def calculator():
     finally:
         print("Thank you for using the calculator.")
 
-
 calculator()
